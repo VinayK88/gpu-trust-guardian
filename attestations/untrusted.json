@@ -1,0 +1,17 @@
+{
+  "gpu_uuid": "GPU-DEMO-0001",
+  "source": "synthetic-nras-shaped-fixture",
+  "nonce_matches": false,
+  "signature_verified": false,
+  "measurement_trusted": false,
+  "cc_mode_enabled": false,
+  "issued_at": "2026-08-14T05:30:00+00:00",
+  "measurement": "sha384:unknown-demo-measurement",
+  "trusted": false,
+  "failed_checks": [
+    "nonce",
+    "signature",
+    "measurement",
+    "confidential-computing mode"
+  ]
+}

@@ -1,0 +1,48 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "gpu-trust-guardian"
+version = "0.1.0"
+description = "Explainable NVIDIA-focused GPU workload, attestation, and AI-agent security lab"
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+authors = [{ name = "Vinay K" }]
+dependencies = [
+  "networkx>=3.4,<4.0",
+  "numpy>=2.0,<3.0",
+  "pandas>=2.2,<4.0",
+  "scikit-learn>=1.5,<2.0",
+]
+keywords = ["cybersecurity", "nvidia", "gpu", "attestation", "morpheus", "ai-security"]
+
+[project.optional-dependencies]
+app = ["plotly>=5.24,<7.0", "streamlit>=1.41,<2.0"]
+nvidia = ["nvidia-ml-py>=12.560,<14.0"]
+notebooks = [
+  "ipykernel>=6.29,<8.0",
+  "jupyter>=1.1,<2.0",
+  "matplotlib>=3.9,<4.0",
+  "nbclient>=0.10,<1.0",
+  "nbformat>=5.10,<6.0",
+]
+dev = ["pytest>=8.3,<10.0", "ruff>=0.9,<1.0"]
+
+[project.scripts]
+gpu-trust-guardian = "gpu_trust_guardian.cli:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"

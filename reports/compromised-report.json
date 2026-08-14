@@ -1,0 +1,526 @@
+{
+  "project": "GPU Trust Guardian",
+  "scenario": "compromised",
+  "generated_at": "2026-08-14T09:17:53.160791+00:00",
+  "source": "synthetic-fixture",
+  "data_classification": "synthetic-demo",
+  "summary": {
+    "decision": "BLOCK",
+    "risk_score": 100,
+    "total_events": 360,
+    "suspicious_events": 104,
+    "attack_paths": 33,
+    "attestation_trusted": false
+  },
+  "severity_counts": {
+    "critical": 3,
+    "high": 2,
+    "medium": 1,
+    "low": 0
+  },
+  "attestation": {
+    "gpu_uuid": "GPU-DEMO-0001",
+    "source": "synthetic-nras-shaped-fixture",
+    "nonce_matches": false,
+    "signature_verified": false,
+    "measurement_trusted": false,
+    "cc_mode_enabled": false,
+    "issued_at": "2026-08-14T05:30:00+00:00",
+    "measurement": "sha384:unknown-demo-measurement",
+    "trusted": false,
+    "failed_checks": [
+      "nonce",
+      "signature",
+      "measurement",
+      "confidential-computing mode"
+    ]
+  },
+  "graph_summary": {
+    "nodes": 41,
+    "edges": 56,
+    "identities": 8,
+    "workloads": 12,
+    "containers": 12,
+    "gpus": 3,
+    "models": 1,
+    "external_destinations": 2
+  },
+  "runtime": {
+    "mode": "cpu-portable-reference",
+    "python": "3.12.13",
+    "nvidia_gpu_required": false
+  },
+  "attack_paths": [
+    [
+      "user:user-07",
+      "workload:job-07",
+      "container:ctr-07",
+      "gpu:GPU-DEMO-0002",
+      "model:sentinel-7b-demo"
+    ],
+    [
+      "user:user-02",
+      "workload:job-10",
+      "container:ctr-10",
+      "gpu:GPU-DEMO-0002",
+      "model:sentinel-7b-demo"
+    ],
+    [
+      "user:user-01",
+      "workload:job-05",
+      "container:ctr-05",
+      "gpu:GPU-DEMO-0003",
+      "model:sentinel-7b-demo"
+    ],
+    [
+      "user:user-06",
+      "workload:job-02",
+      "container:ctr-02",
+      "gpu:GPU-DEMO-0003",
+      "model:sentinel-7b-demo"
+    ],
+    [
+      "user:user-07",
+      "workload:job-11",
+      "container:ctr-11",
+      "gpu:GPU-DEMO-0003",
+      "model:sentinel-7b-demo"
+    ],
+    [
+      "user:user-02",
+      "workload:job-06",
+      "container:ctr-06",
+      "gpu:GPU-DEMO-0001",
+      "model:sentinel-7b-demo"
+    ],
+    [
+      "user:user-00",
+      "workload:job-08",
+      "container:ctr-08",
+      "gpu:GPU-DEMO-0003",
+      "model:sentinel-7b-demo"
+    ],
+    [
+      "user:user-01",
+      "workload:job-09",
+      "container:ctr-09",
+      "gpu:GPU-DEMO-0001",
+      "model:sentinel-7b-demo"
+    ],
+    [
+      "user:user-03",
+      "workload:job-03",
+      "container:ctr-03",
+      "gpu:GPU-DEMO-0001",
+      "model:sentinel-7b-demo"
+    ],
+    [
+      "user:user-05",
+      "workload:job-01",
+      "container:ctr-01",
+      "gpu:GPU-DEMO-0002",
+      "model:sentinel-7b-demo"
+    ],
+    [
+      "user:user-03",
+      "workload:job-07",
+      "container:ctr-07",
+      "gpu:GPU-DEMO-0002",
+      "model:sentinel-7b-demo",
+      "external:object-store.example.invalid"
+    ],
+    [
+      "user:user-05",
+      "workload:job-09",
+      "container:ctr-09",
+      "gpu:GPU-DEMO-0001",
+      "external:pool.example.invalid"
+    ],
+    [
+      "user:user-06",
+      "workload:job-10",
+      "container:ctr-10",
+      "gpu:GPU-DEMO-0002",
+      "model:sentinel-7b-demo",
+      "external:object-store.example.invalid"
+    ],
+    [
+      "user:user-07",
+      "workload:job-11",
+      "container:ctr-11",
+      "gpu:GPU-DEMO-0003",
+      "resource:host-kernel"
+    ],
+    [
+      "user:user-00",
+      "workload:job-00",
+      "container:ctr-00",
+      "gpu:GPU-DEMO-0001",
+      "model:sentinel-7b-demo",
+      "resource:telemetry.partner.internal"
+    ],
+    [
+      "user:user-01",
+      "workload:job-01",
+      "container:ctr-01",
+      "gpu:GPU-DEMO-0002",
+      "model:sentinel-7b-demo",
+      "external:object-store.example.invalid"
+    ],
+    [
+      "user:user-02",
+      "workload:job-02",
+      "container:ctr-02",
+      "gpu:GPU-DEMO-0003",
+      "resource:host-kernel"
+    ],
+    [
+      "user:user-03",
+      "workload:job-03",
+      "container:ctr-03",
+      "gpu:GPU-DEMO-0001",
+      "external:pool.example.invalid"
+    ],
+    [
+      "user:user-04",
+      "workload:job-04",
+      "container:ctr-04",
+      "gpu:GPU-DEMO-0002",
+      "model:sentinel-7b-demo",
+      "resource:backup.internal"
+    ],
+    [
+      "user:user-05",
+      "workload:job-05",
+      "container:ctr-05",
+      "gpu:GPU-DEMO-0003",
+      "resource:host-kernel"
+    ],
+    [
+      "user:user-06",
+      "workload:job-06",
+      "container:ctr-06",
+      "gpu:GPU-DEMO-0001",
+      "external:pool.example.invalid"
+    ],
+    [
+      "user:user-07",
+      "workload:job-07",
+      "container:ctr-07",
+      "gpu:GPU-DEMO-0002",
+      "model:sentinel-7b-demo",
+      "external:object-store.example.invalid"
+    ],
+    [
+      "user:user-01",
+      "workload:job-09",
+      "container:ctr-09",
+      "gpu:GPU-DEMO-0001",
+      "external:pool.example.invalid"
+    ],
+    [
+      "user:user-02",
+      "workload:job-10",
+      "container:ctr-10",
+      "gpu:GPU-DEMO-0002",
+      "model:sentinel-7b-demo",
+      "external:object-store.example.invalid"
+    ],
+    [
+      "user:user-03",
+      "workload:job-11",
+      "container:ctr-11",
+      "gpu:GPU-DEMO-0003",
+      "resource:host-kernel"
+    ],
+    [
+      "user:user-04",
+      "workload:job-00",
+      "container:ctr-00",
+      "gpu:GPU-DEMO-0001",
+      "model:sentinel-7b-demo",
+      "resource:telemetry.partner.internal"
+    ],
+    [
+      "user:user-05",
+      "workload:job-01",
+      "container:ctr-01",
+      "gpu:GPU-DEMO-0002",
+      "model:sentinel-7b-demo",
+      "external:object-store.example.invalid"
+    ],
+    [
+      "user:user-06",
+      "workload:job-02",
+      "container:ctr-02",
+      "gpu:GPU-DEMO-0003",
+      "resource:host-kernel"
+    ],
+    [
+      "user:user-07",
+      "workload:job-03",
+      "container:ctr-03",
+      "gpu:GPU-DEMO-0001",
+      "external:pool.example.invalid"
+    ],
+    [
+      "user:user-00",
+      "workload:job-04",
+      "container:ctr-04",
+      "gpu:GPU-DEMO-0002",
+      "model:sentinel-7b-demo",
+      "resource:backup.internal"
+    ],
+    [
+      "user:user-01",
+      "workload:job-05",
+      "container:ctr-05",
+      "gpu:GPU-DEMO-0003",
+      "resource:host-kernel"
+    ],
+    [
+      "user:user-02",
+      "workload:job-06",
+      "container:ctr-06",
+      "gpu:GPU-DEMO-0001",
+      "external:pool.example.invalid"
+    ],
+    [
+      "user:user-00",
+      "workload:job-08",
+      "container:ctr-08",
+      "gpu:GPU-DEMO-0003",
+      "resource:host-kernel"
+    ]
+  ],
+  "top_anomalies": [
+    {
+      "timestamp": "2026-08-13 00:55:00+00:00",
+      "event_id": "evt-compromi-0299",
+      "workload": "job-11",
+      "process": "nsenter-demo",
+      "destination": "host-kernel",
+      "label": "container_escape",
+      "anomaly_score": 14.9536
+    },
+    {
+      "timestamp": "2026-08-13 03:55:00+00:00",
+      "event_id": "evt-compromi-0335",
+      "workload": "job-11",
+      "process": "nsenter-demo",
+      "destination": "host-kernel",
+      "label": "container_escape",
+      "anomaly_score": 14.9372
+    },
+    {
+      "timestamp": "2026-08-12 23:25:00+00:00",
+      "event_id": "evt-compromi-0281",
+      "workload": "job-05",
+      "process": "nsenter-demo",
+      "destination": "host-kernel",
+      "label": "container_escape",
+      "anomaly_score": 14.8404
+    },
+    {
+      "timestamp": "2026-08-12 22:10:00+00:00",
+      "event_id": "evt-compromi-0266",
+      "workload": "job-02",
+      "process": "nsenter-demo",
+      "destination": "host-kernel",
+      "label": "container_escape",
+      "anomaly_score": 14.8155
+    },
+    {
+      "timestamp": "2026-08-13 02:55:00+00:00",
+      "event_id": "evt-compromi-0323",
+      "workload": "job-11",
+      "process": "nsenter-demo",
+      "destination": "host-kernel",
+      "label": "container_escape",
+      "anomaly_score": 14.7217
+    },
+    {
+      "timestamp": "2026-08-13 03:25:00+00:00",
+      "event_id": "evt-compromi-0329",
+      "workload": "job-05",
+      "process": "nsenter-demo",
+      "destination": "host-kernel",
+      "label": "container_escape",
+      "anomaly_score": 14.6592
+    },
+    {
+      "timestamp": "2026-08-13 04:55:00+00:00",
+      "event_id": "evt-compromi-0347",
+      "workload": "job-11",
+      "process": "nsenter-demo",
+      "destination": "host-kernel",
+      "label": "container_escape",
+      "anomaly_score": 14.5755
+    },
+    {
+      "timestamp": "2026-08-13 05:25:00+00:00",
+      "event_id": "evt-compromi-0353",
+      "workload": "job-05",
+      "process": "nsenter-demo",
+      "destination": "host-kernel",
+      "label": "container_escape",
+      "anomaly_score": 14.488
+    },
+    {
+      "timestamp": "2026-08-13 04:10:00+00:00",
+      "event_id": "evt-compromi-0338",
+      "workload": "job-02",
+      "process": "nsenter-demo",
+      "destination": "host-kernel",
+      "label": "container_escape",
+      "anomaly_score": 14.4794
+    },
+    {
+      "timestamp": "2026-08-13 02:10:00+00:00",
+      "event_id": "evt-compromi-0314",
+      "workload": "job-02",
+      "process": "nsenter-demo",
+      "destination": "host-kernel",
+      "label": "container_escape",
+      "anomaly_score": 14.476
+    }
+  ],
+  "findings": [
+    {
+      "finding_id": "GPU-ATTEST-001",
+      "severity": "critical",
+      "category": "attestation",
+      "title": "GPU trust evidence failed policy",
+      "subject": "GPU-DEMO-0001",
+      "evidence": "Failed checks: nonce, signature, measurement, confidential-computing mode. Measurement: sha384:unknown-demo-measurement.",
+      "remediation": "Do not release model keys or sensitive workloads; verify with NVIDIA attestation services.",
+      "score": 46,
+      "event_ids": []
+    },
+    {
+      "finding_id": "GPU-BEHAVIOR-001",
+      "severity": "high",
+      "category": "cryptomining",
+      "title": "GPU behavior resembles unauthorized cryptomining",
+      "subject": "job-09",
+      "evidence": "25 events combine sustained utilization, high power, low memory use, or a synthetic miner-process indicator.",
+      "remediation": "Quarantine the workload, preserve telemetry, and validate the image and owner.",
+      "score": 28,
+      "event_ids": [
+        "evt-compromi-0261",
+        "evt-compromi-0267",
+        "evt-compromi-0270",
+        "evt-compromi-0273",
+        "evt-compromi-0279",
+        "evt-compromi-0282",
+        "evt-compromi-0285",
+        "evt-compromi-0291",
+        "evt-compromi-0294",
+        "evt-compromi-0297",
+        "evt-compromi-0303",
+        "evt-compromi-0306"
+      ]
+    },
+    {
+      "finding_id": "GPU-EGRESS-001",
+      "severity": "critical",
+      "category": "model-exfiltration",
+      "title": "Large external transfer followed model access",
+      "subject": "sentinel-7b-demo",
+      "evidence": "26 events transferred 43,140.6 MB to synthetic external destinations after model access.",
+      "remediation": "Block egress, revoke the workload identity, and validate model artifact access logs.",
+      "score": 42,
+      "event_ids": [
+        "evt-compromi-0259",
+        "evt-compromi-0262",
+        "evt-compromi-0265",
+        "evt-compromi-0271",
+        "evt-compromi-0274",
+        "evt-compromi-0277",
+        "evt-compromi-0283",
+        "evt-compromi-0286",
+        "evt-compromi-0289",
+        "evt-compromi-0295",
+        "evt-compromi-0298",
+        "evt-compromi-0301"
+      ]
+    },
+    {
+      "finding_id": "GPU-CONTAINER-001",
+      "severity": "critical",
+      "category": "container-escape",
+      "title": "Privileged GPU container reached the host PID namespace",
+      "subject": "ctr-11",
+      "evidence": "25 events show privileged execution with host PID access.",
+      "remediation": "Terminate the workload and investigate node, container runtime, and service account.",
+      "score": 40,
+      "event_ids": [
+        "evt-compromi-0263",
+        "evt-compromi-0266",
+        "evt-compromi-0269",
+        "evt-compromi-0275",
+        "evt-compromi-0278",
+        "evt-compromi-0281",
+        "evt-compromi-0287",
+        "evt-compromi-0290",
+        "evt-compromi-0293",
+        "evt-compromi-0299",
+        "evt-compromi-0302",
+        "evt-compromi-0305"
+      ]
+    },
+    {
+      "finding_id": "GPU-IMAGE-001",
+      "severity": "high",
+      "category": "workload-integrity",
+      "title": "Unsigned image received privileged GPU access",
+      "subject": "ctr-11",
+      "evidence": "25 privileged events used an unsigned demo image.",
+      "remediation": "Require signed images and deny privileged GPU containers by default.",
+      "score": 22,
+      "event_ids": [
+        "evt-compromi-0263",
+        "evt-compromi-0266",
+        "evt-compromi-0269",
+        "evt-compromi-0275",
+        "evt-compromi-0278",
+        "evt-compromi-0281",
+        "evt-compromi-0287",
+        "evt-compromi-0290",
+        "evt-compromi-0293",
+        "evt-compromi-0299",
+        "evt-compromi-0302",
+        "evt-compromi-0305"
+      ]
+    },
+    {
+      "finding_id": "GPU-ML-001",
+      "severity": "medium",
+      "category": "digital-fingerprint",
+      "title": "Workload behavior departed from its trusted fingerprint",
+      "subject": "job-07",
+      "evidence": "104 events exceeded the transparent anomaly threshold; maximum score 14.95.",
+      "remediation": "Review the highest-scoring events with workload owner and deployment history.",
+      "score": 14,
+      "event_ids": [
+        "evt-compromi-0007",
+        "evt-compromi-0010",
+        "evt-compromi-0017",
+        "evt-compromi-0038",
+        "evt-compromi-0071",
+        "evt-compromi-0086",
+        "evt-compromi-0090",
+        "evt-compromi-0104",
+        "evt-compromi-0129",
+        "evt-compromi-0195",
+        "evt-compromi-0215",
+        "evt-compromi-0219"
+      ]
+    }
+  ],
+  "limitations": [
+    "All checked-in telemetry and attack labels are synthetic.",
+    "The demo attestation parser does not replace NVIDIA Remote Attestation Service verification.",
+    "Synthetic model scores validate the pipeline, not production detection performance."
+  ]
+}

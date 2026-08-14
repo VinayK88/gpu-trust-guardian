@@ -1,0 +1,147 @@
+{
+  "project": "GPU Trust Guardian",
+  "scenario": "secure",
+  "generated_at": "2026-08-14T09:17:53.148646+00:00",
+  "source": "synthetic-fixture",
+  "data_classification": "synthetic-demo",
+  "summary": {
+    "decision": "ALLOW",
+    "risk_score": 0,
+    "total_events": 360,
+    "suspicious_events": 0,
+    "attack_paths": 0,
+    "attestation_trusted": true
+  },
+  "severity_counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+  },
+  "attestation": {
+    "gpu_uuid": "GPU-DEMO-0001",
+    "source": "synthetic-nras-shaped-fixture",
+    "nonce_matches": true,
+    "signature_verified": true,
+    "measurement_trusted": true,
+    "cc_mode_enabled": true,
+    "issued_at": "2026-08-14T05:30:00+00:00",
+    "measurement": "sha384:trusted-demo-rim",
+    "trusted": true,
+    "failed_checks": []
+  },
+  "graph_summary": {
+    "nodes": 36,
+    "edges": 51,
+    "identities": 8,
+    "workloads": 12,
+    "containers": 12,
+    "gpus": 3,
+    "models": 1,
+    "external_destinations": 0
+  },
+  "runtime": {
+    "mode": "cpu-portable-reference",
+    "python": "3.12.13",
+    "nvidia_gpu_required": false
+  },
+  "attack_paths": [],
+  "top_anomalies": [
+    {
+      "timestamp": "2026-08-12 14:05:00+00:00",
+      "event_id": "evt-secure-0169",
+      "workload": "job-01",
+      "process": "python-train",
+      "destination": "model-registry.internal",
+      "label": "benign",
+      "anomaly_score": 1.7817
+    },
+    {
+      "timestamp": "2026-08-12 14:15:00+00:00",
+      "event_id": "evt-secure-0171",
+      "workload": "job-03",
+      "process": "tritonserver",
+      "destination": "model-registry.internal",
+      "label": "benign",
+      "anomaly_score": 1.7486
+    },
+    {
+      "timestamp": "2026-08-12 11:40:00+00:00",
+      "event_id": "evt-secure-0140",
+      "workload": "job-08",
+      "process": "python-train",
+      "destination": "model-registry.internal",
+      "label": "benign",
+      "anomaly_score": 1.6239
+    },
+    {
+      "timestamp": "2026-08-12 06:10:00+00:00",
+      "event_id": "evt-secure-0074",
+      "workload": "job-02",
+      "process": "python-train",
+      "destination": "model-registry.internal",
+      "label": "benign",
+      "anomaly_score": 1.6145
+    },
+    {
+      "timestamp": "2026-08-13 05:30:00+00:00",
+      "event_id": "evt-secure-0354",
+      "workload": "job-06",
+      "process": "tritonserver",
+      "destination": "model-registry.internal",
+      "label": "benign",
+      "anomaly_score": 1.578
+    },
+    {
+      "timestamp": "2026-08-13 02:50:00+00:00",
+      "event_id": "evt-secure-0322",
+      "workload": "job-10",
+      "process": "python-train",
+      "destination": "model-registry.internal",
+      "label": "benign",
+      "anomaly_score": 1.4861
+    },
+    {
+      "timestamp": "2026-08-13 05:20:00+00:00",
+      "event_id": "evt-secure-0352",
+      "workload": "job-04",
+      "process": "python-train",
+      "destination": "model-registry.internal",
+      "label": "benign",
+      "anomaly_score": 1.4694
+    },
+    {
+      "timestamp": "2026-08-12 19:40:00+00:00",
+      "event_id": "evt-secure-0236",
+      "workload": "job-08",
+      "process": "python-train",
+      "destination": "model-registry.internal",
+      "label": "benign",
+      "anomaly_score": 1.4369
+    },
+    {
+      "timestamp": "2026-08-12 23:40:00+00:00",
+      "event_id": "evt-secure-0284",
+      "workload": "job-08",
+      "process": "python-train",
+      "destination": "model-registry.internal",
+      "label": "benign",
+      "anomaly_score": 1.4339
+    },
+    {
+      "timestamp": "2026-08-12 14:35:00+00:00",
+      "event_id": "evt-secure-0175",
+      "workload": "job-07",
+      "process": "python-train",
+      "destination": "model-registry.internal",
+      "label": "benign",
+      "anomaly_score": 1.4045
+    }
+  ],
+  "findings": [],
+  "limitations": [
+    "All checked-in telemetry and attack labels are synthetic.",
+    "The demo attestation parser does not replace NVIDIA Remote Attestation Service verification.",
+    "Synthetic model scores validate the pipeline, not production detection performance."
+  ]
+}

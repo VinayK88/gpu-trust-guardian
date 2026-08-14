@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="820" viewBox="0 0 1400 820" role="img" aria-labelledby="title desc">
+  <title id="title">GPU Trust Guardian dashboard preview</title>
+  <desc id="desc">A dashboard showing a blocked GPU workload, risk score, suspicious events, attack paths, failed attestation, time series, behavior counts and evidence findings.</desc>
+  <defs>
+    <linearGradient id="hero" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#eef8e6"/><stop offset="1" stop-color="#fff"/></linearGradient>
+    <filter id="shadow"><feDropShadow dx="0" dy="5" stdDeviation="9" flood-color="#142113" flood-opacity=".09"/></filter>
+    <style>.h1{font:800 31px Inter,Arial,sans-serif;fill:#142113}.h2{font:700 17px Inter,Arial,sans-serif;fill:#142113}.k{font:800 11px Inter,Arial,sans-serif;letter-spacing:.11em;fill:#4f7d00}.label{font:600 12px Inter,Arial,sans-serif;fill:#667063}.value{font:800 25px Inter,Arial,sans-serif;fill:#142113}.small{font:500 11px Inter,Arial,sans-serif;fill:#667063}.card{fill:#fff;stroke:#dfe7dc;stroke-width:1.5}.grid{stroke:#e7ece4;stroke-width:1}</style>
+  </defs>
+  <rect width="1400" height="820" rx="28" fill="#f7faf6"/>
+  <rect x="30" y="28" width="230" height="764" rx="20" fill="#172514"/>
+  <text x="58" y="72" class="k" fill="#b9e36b">TRUST SIMULATION</text>
+  <text x="58" y="118" class="small" fill="#d8e7d2">Scenario</text><rect x="55" y="132" width="180" height="42" rx="10" fill="#263b21"/><text x="72" y="159" class="h2" fill="#fff">compromised</text>
+  <text x="58" y="215" class="small" fill="#d8e7d2">Attestation</text><rect x="55" y="230" width="180" height="42" rx="10" fill="#4b1d1d"/><text x="72" y="257" class="h2" fill="#fecaca">FAILED</text>
+  <text x="58" y="320" class="small" fill="#d8e7d2">DECISION POLICY</text>
+  <text x="58" y="354" class="small" fill="#d8e7d2">ALLOW</text><circle cx="212" cy="350" r="6" fill="#76b900"/>
+  <text x="58" y="382" class="small" fill="#d8e7d2">QUARANTINE</text><circle cx="212" cy="378" r="6" fill="#d9a404"/>
+  <text x="58" y="410" class="small" fill="#d8e7d2">BLOCK</text><circle cx="212" cy="406" r="6" fill="#ef4444"/>
+  <text x="58" y="744" class="small" fill="#9fb499">Synthetic demo data</text><text x="58" y="766" class="small" fill="#9fb499">CPU reference mode</text>
+
+  <rect x="285" y="28" width="1085" height="114" rx="20" fill="url(#hero)" stroke="#c9dda9"/>
+  <text x="318" y="58" class="k">NVIDIA-FOCUSED AI INFRASTRUCTURE SECURITY LAB</text>
+  <text x="318" y="96" class="h1">GPU Trust Guardian</text>
+  <text x="318" y="122" class="small">Should this GPU workload receive model access—or be contained first?</text>
+
+  <g filter="url(#shadow)">
+    <rect x="285" y="164" width="166" height="88" rx="15" class="card"/><text x="307" y="191" class="label">POLICY DECISION</text><text x="307" y="230" class="value" fill="#b91c1c">BLOCK</text>
+    <rect x="468" y="164" width="166" height="88" rx="15" class="card"/><text x="490" y="191" class="label">RISK SCORE</text><text x="490" y="230" class="value">100/100</text>
+    <rect x="651" y="164" width="166" height="88" rx="15" class="card"/><text x="673" y="191" class="label">SUSPICIOUS</text><text x="673" y="230" class="value">104</text>
+    <rect x="834" y="164" width="166" height="88" rx="15" class="card"/><text x="856" y="191" class="label">ATTACK PATHS</text><text x="856" y="230" class="value">33</text>
+    <rect x="1017" y="164" width="166" height="88" rx="15" class="card"/><text x="1039" y="191" class="label">GPU TRUST</text><text x="1039" y="230" class="value" fill="#b91c1c">FAILED</text>
+    <rect x="1200" y="164" width="170" height="88" rx="15" class="card"/><text x="1222" y="191" class="label">EVENTS</text><text x="1222" y="230" class="value">360</text>
+  </g>
+
+  <rect x="285" y="275" width="1085" height="225" rx="18" class="card"/>
+  <text x="315" y="309" class="h2">Behavioral risk over time</text><text x="315" y="330" class="small">Mean fingerprint score per 30-minute window · synthetic UTC telemetry</text>
+  <path d="M315 460H1340M315 420H1340M315 380H1340" class="grid"/>
+  <path d="M320 452 C430 450 480 448 560 451 S710 446 790 449 S900 444 970 420 S1060 390 1110 353 S1200 335 1335 315" fill="none" stroke="#76b900" stroke-width="5"/>
+  <g fill="#76b900" stroke="#365314"><circle cx="320" cy="452" r="5"/><circle cx="560" cy="451" r="5"/><circle cx="790" cy="449" r="5"/><circle cx="970" cy="420" r="5"/><circle cx="1110" cy="353" r="5"/><circle cx="1335" cy="315" r="5"/></g>
+
+  <rect x="285" y="525" width="520" height="237" rx="18" class="card"/>
+  <text x="315" y="560" class="h2">Telemetry by behavior label</text><text x="315" y="581" class="small">Event counts in selected scenario</text>
+  <text x="315" y="620" class="small">Benign</text><rect x="430" y="606" width="310" height="20" rx="5" fill="#94a3b8"/><text x="750" y="621" class="small">256</text>
+  <text x="315" y="660" class="small">Cryptomining</text><rect x="430" y="646" width="86" height="20" rx="5" fill="#f97316"/><text x="526" y="661" class="small">35</text>
+  <text x="315" y="700" class="small">Model exfiltration</text><rect x="430" y="686" width="84" height="20" rx="5" fill="#db2777"/><text x="524" y="701" class="small">35</text>
+  <text x="315" y="740" class="small">Container escape</text><rect x="430" y="726" width="82" height="20" rx="5" fill="#d9a404"/><text x="522" y="741" class="small">34</text>
+
+  <rect x="830" y="525" width="540" height="237" rx="18" class="card"/>
+  <text x="860" y="560" class="h2">Evidence-backed findings</text><text x="860" y="581" class="small">Bounded rules + transparent policy contributions</text>
+  <rect x="860" y="605" width="480" height="38" rx="9" fill="#fee2e2"/><text x="876" y="629" class="small" fill="#991b1b">CRITICAL · GPU trust evidence failed policy</text>
+  <rect x="860" y="651" width="480" height="38" rx="9" fill="#fee2e2"/><text x="876" y="675" class="small" fill="#991b1b">CRITICAL · Large transfer followed model access</text>
+  <rect x="860" y="697" width="480" height="38" rx="9" fill="#ffedd5"/><text x="876" y="721" class="small" fill="#9a3412">HIGH · GPU behavior resembles cryptomining</text>
+  <text x="700" y="801" text-anchor="middle" class="small">Illustrative preview built from the checked-in compromised report</text>
+</svg>

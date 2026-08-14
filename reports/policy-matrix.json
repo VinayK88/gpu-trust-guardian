@@ -1,0 +1,56 @@
+[
+  {
+    "scenario": "trusted_training",
+    "decision": "ALLOW",
+    "risk_score": 14,
+    "findings": 1,
+    "suspicious_events": 8,
+    "attack_paths": 8,
+    "attestation_trusted": true
+  },
+  {
+    "scenario": "benign_inference",
+    "decision": "ALLOW",
+    "risk_score": 14,
+    "findings": 1,
+    "suspicious_events": 9,
+    "attack_paths": 9,
+    "attestation_trusted": true
+  },
+  {
+    "scenario": "cryptomining",
+    "decision": "QUARANTINE",
+    "risk_score": 42,
+    "findings": 2,
+    "suspicious_events": 55,
+    "attack_paths": 18,
+    "attestation_trusted": true
+  },
+  {
+    "scenario": "model_exfiltration",
+    "decision": "BLOCK",
+    "risk_score": 56,
+    "findings": 2,
+    "suspicious_events": 55,
+    "attack_paths": 18,
+    "attestation_trusted": true
+  },
+  {
+    "scenario": "container_escape",
+    "decision": "BLOCK",
+    "risk_score": 76,
+    "findings": 3,
+    "suspicious_events": 55,
+    "attack_paths": 18,
+    "attestation_trusted": true
+  },
+  {
+    "scenario": "untrusted_gpu",
+    "decision": "BLOCK",
+    "risk_score": 60,
+    "findings": 2,
+    "suspicious_events": 16,
+    "attack_paths": 11,
+    "attestation_trusted": false
+  }
+]

@@ -1,0 +1,12 @@
+{
+  "gpu_uuid": "GPU-DEMO-0001",
+  "source": "synthetic-nras-shaped-fixture",
+  "nonce_matches": true,
+  "signature_verified": true,
+  "measurement_trusted": true,
+  "cc_mode_enabled": true,
+  "issued_at": "2026-08-14T05:30:00+00:00",
+  "measurement": "sha384:trusted-demo-rim",
+  "trusted": true,
+  "failed_checks": []
+}
