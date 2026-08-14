@@ -41,15 +41,15 @@ def notebook(cells: list) -> nbf.NotebookNode:
     return document
 
 
-def common_setup() -> str:
+def common_setup(*, include_json: bool = False, include_numpy: bool = False) -> str:
+    json_import = "import json\n" if include_json else ""
+    numpy_import = "import numpy as np\n" if include_numpy else ""
     return f"""
 from pathlib import Path
-import json
-import sys
+{json_import}import sys
 
 import matplotlib.pyplot as plt
-import numpy as np
-import pandas as pd
+{numpy_import}import pandas as pd
 
 ROOT = Path.cwd().resolve()
 while ROOT != ROOT.parent and not (ROOT / "pyproject.toml").exists():
@@ -108,7 +108,7 @@ def build_fingerprint_notebook() -> nbf.NotebookNode:
             - A high anomaly score prioritizes review; it does not prove compromise.
             """),
             markdown("## Data\n\nLoad the versioned corpus and validate its population, split, and label coverage."),
-            code(common_setup()),
+            code(common_setup(include_numpy=True)),
             code("""
 from gpu_trust_guardian.features import FEATURE_COLUMNS, engineer_features
 
@@ -136,7 +136,7 @@ print("Validated", len(frame), "synthetic events with", len(FEATURE_COLUMNS), "b
             markdown("## Results\n\nFit both models on the same training population and evaluate once on the challenge split."),
             code("""
 from sklearn.ensemble import IsolationForest, RandomForestClassifier
-from sklearn.metrics import confusion_matrix, f1_score, precision_score, recall_score, roc_auc_score
+from sklearn.metrics import confusion_matrix, f1_score, precision_score, recall_score
 
 train = frame[frame["split"] == "train"].copy()
 test = frame[frame["split"] == "test"].copy()
@@ -281,7 +281,7 @@ def build_graph_notebook() -> nbf.NotebookNode:
             - Duplicate paths are collapsed to keep analyst review bounded.
             """),
             markdown("## Data\n\nLoad the same compromised fixture and reproduce the graph from source events."),
-            code(common_setup()),
+            code(common_setup(include_numpy=True)),
             code("""
 from collections import Counter
 import networkx as nx
@@ -410,7 +410,7 @@ def build_attestation_notebook() -> nbf.NotebookNode:
             - Behavior evidence can independently block a trusted GPU workload.
             """),
             markdown("## Data\n\nRecreate six scenario reports from deterministic inputs and compare them with the checked-in policy matrix."),
-            code(common_setup()),
+            code(common_setup(include_json=True)),
             code("""
 from gpu_trust_guardian.pipeline import analyze_events
 from gpu_trust_guardian.simulator import SCENARIOS, build_attestation, generate_events
@@ -540,7 +540,7 @@ def build_guardrail_notebook() -> nbf.NotebookNode:
             - LLM output is treated as untrusted; the deterministic application layer owns enforcement.
             """),
             markdown("## Data\n\nLoad the versioned cases and verify category and expectation coverage."),
-            code(common_setup()),
+            code(common_setup(include_json=True, include_numpy=True)),
             code("""
 from gpu_trust_guardian.guardrails import evaluate_cases
 
