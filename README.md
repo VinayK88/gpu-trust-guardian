@@ -22,6 +22,16 @@
 
 > Independent educational portfolio project. It is not affiliated with, sponsored by, or endorsed by NVIDIA.
 
+## 60-second reviewer path
+
+Short on time? Review the project in this order:
+
+1. [Understand the security problem](#eli5-what-does-this-project-do).
+2. [Inspect the measured evidence and limitations](#executed-results).
+3. [See the analyst-facing visuals](#analyst-dashboard).
+4. [Open the executed ML and graph notebooks](#four-executed-notebooks).
+5. [Reproduce the demo locally](#quick-start).
+
 ## ELI5: what does this project do?
 
 Imagine a GPU is a **very powerful robot** that will be trusted with a secret AI model.
